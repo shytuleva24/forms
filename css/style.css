@@ -8,6 +8,12 @@ body {
     font-size: 14px;
 }
 
+textarea {
+    font-family: "Roboto";
+    min-height: 40px;
+    max-height: 300px;
+}
+
 h1 {
     margin-top: 0;
     margin-bottom: 30px;
