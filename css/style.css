@@ -11,7 +11,7 @@ body {
 textarea {
     font-family: "Roboto";
     min-height: 40px;
-    max-height: 300px;
+    max-height: 250px;
 }
 
 h1 {
@@ -29,7 +29,7 @@ textarea {
 
 hr {
     margin: 25px auto;
-    max-width: 960px;
+    max-width: 100%;
     border: none;
     border-top: 1px solid #dcdcde;
 }
@@ -71,6 +71,7 @@ input:active, textarea:active {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 3px;
+    width: 100%;
 }
 
 .container {
@@ -79,6 +80,100 @@ input:active, textarea:active {
     padding-bottom: 25px;
     max-width: 960px;
     position: relative;
+}
+
+.radio,
+.check {
+    visibility: hidden;
+    position: absolute;
+}
+
+.radio + label {
+    position: relative;
+    padding: 0 25px 20px;
+    
+}
+
+.radio + label:before,
+.radio + label:after {
+  content: "";
+  position: absolute;
+}
+
+.radio + label:before {
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.radio:checked + label:before {
+    border: 1px solid #3e6aff;
+}
+  
+.radio + label:after {
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+}
+  
+.radio:checked + label:after {
+    width: 8px;
+    height: 8px;
+    background-color: #3e6aff;
+    border-radius: 50%; 
+}
+  
+.check + label {
+    position: relative;
+    padding: 0 25px 20px;
+}
+  
+.check + label:before,
+.check + label:after {
+    content: "";
+    position: absolute;
+}
+  
+.check + label:before {
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+  
+.check:checked + label:before {
+    background-color: #ffffff;
+    border: 1px solid #3e6aff;
+}
+  
+.check + label:after {
+    left: 4px;
+    top: 4px;
+}
+  
+.check:checked + label:after {
+    width: 8px;
+    height: 5px;
+    border-right: 2px solid #244dd7;
+    border-top: 2px solid #244dd7;
+    transform: rotate(135deg);    
+}
+
+.disabled + label {
+    color: #b3b3b3;
+}
+
+.disabled + label:before {
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
 }
 
 .header img {
@@ -136,7 +231,7 @@ input:active, textarea:active {
 .products p {
     margin: 0;
     padding: 15px 22px;
-    width: 100px;
+    width: 91px;
     color: #b3b3b3;
     font-weight: 700;
 }
@@ -152,6 +247,10 @@ input:active, textarea:active {
 .products-chek,
 .products-date {
     align-items: center;
+}
+
+.products-chek label {
+    padding-bottom: 0;
 }
 
 .radio-sex {
@@ -262,6 +361,7 @@ input:checked:before {
 .row > label,
 .row span {
     width: 160px;
+    padding: 12px 0;
 }
 
 .row > input,
@@ -272,6 +372,32 @@ input:checked:before {
 
 .row input {
     margin-bottom: 15px;
+}
+
+label.table12 {
+      padding: 13px 0 17px;
+}
+
+.file + input {
+    visibility: hidden;
+    position: absolute;
+}
+
+label.file1 {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    width: 170px;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    margin-bottom: 15px;
+}
+
+label.file1:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(15,40,126,0.35));
 }
 
 .sex label {
@@ -285,6 +411,59 @@ input:checked:before {
 .top {
     vertical-align: top;
     padding-top: 14px;
+}
+
+.form-table2 {
+    max-width: 680px;
+}
+
+.form-table2 label {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+.form-table2 table td {
+    border-left: 4px solid transparent;
+}
+
+.form-table2 table td:first-child {
+    border-left: none;
+}
+
+.form-table2 input,
+.form-table2 select {
+    margin-top: 6px;
+}
+
+.buttons {
+    justify-content: space-between
+}
+
+.back {
+    color: #6e6f77;
+    font-weight: 700;
+    width: 180px;
+    height: 43px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #85868d;
+}
+
+.back:hover {
+    background-color: #85868d;
+    color: #fff;
+}
+
+.buttons .register {
+    width: 180px;
+    height: 43px;
+    border-radius: 3px;
+    background-color: #12d661;
+}
+
+.buttons .register:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+    background-color: #07be51
 }
 
 .fixed {
@@ -332,7 +511,6 @@ input:checked:before {
 
 label.remember-password {
     color: #1f222c;
-    vertical-align: middle;
     padding-bottom: 15px;
     margin: 0;
 }
