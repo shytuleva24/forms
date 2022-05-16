@@ -1,0 +1,356 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+textarea {
+    resize: vertical;
+}
+
+hr {
+    margin: 25px auto;
+    max-width: 960px;
+    border: none;
+    border-top: 1px solid #dcdcde;
+}
+
+input {
+    margin: 0;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    background-color: #ffffff;
+    border: 1px solid #3e6aff;
+}
+
+a:active, a:focus { 
+    outline: none; 
+}
+
+input, textarea {
+    outline:none;
+}
+
+input:active, textarea:active {
+    outline:none;
+}
+
+:focus {
+    outline:none;
+}
+
+.flex {
+    display: flex;
+}
+
+.input {
+    margin-bottom: 10px;
+    padding: 12px 17px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 960px;
+    position: relative;
+}
+
+.header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.simpleform {
+    max-width: 330px;
+}
+
+.simpleform input,
+.simpleform select,
+.simpleform textarea {
+    width: 100%;
+}
+
+.register {
+    padding: 15px 0;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #12d661;
+    border: none;
+    border-radius: 3px;
+}
+
+.register:hover {
+    background-color: #07be51;
+    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+}
+
+.elements {
+    justify-content: space-between
+}
+
+.elements > div > label > input {
+    margin-right: 20px;
+    margin-bottom: 13px;
+}
+
+.delivery {
+    flex-direction: column;
+}
+
+.products {
+    width: 473px;
+    height: 114px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products p {
+    margin: 0;
+    padding: 15px 22px;
+    width: 100px;
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.products label {
+    padding-right: 25px;
+}
+
+.products input {
+    margin-right: 5px;
+}
+
+.products-chek,
+.products-date {
+    align-items: center;
+}
+
+.radio-sex {
+    flex-direction: column;
+    width: 50%;
+}
+
+.radio-sex input {
+   position: absolute;
+   left: -99999px;
+}
+
+.radio-sex label {
+    position: relative;
+    padding-left: 90px;
+    cursor: pointer;
+    line-height: 85px;
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+}
+
+.radio-sex input:checked + label {
+    color: #3e6aff;
+}
+
+.radio-sex label:before {
+    position: absolute;
+    left: 0;
+}
+
+.radio-sex .male:before {
+    content: url(../img/male.png);
+}
+
+.radio-sex input:checked + .male:before {
+    content: url(../img/male-active.png);
+}
+
+.radio-sex .female:before {
+    content: url(../img/female.png);
+}
+
+.radio-sex input:checked + .female:before {
+    content: url(../img/female-active.png);
+}
+
+.slide-checkbox {
+    width: 50%;
+    flex-direction: column;
+    justify-content: center
+}
+  
+.checkbox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+.checkbox input {
+    outline: none;
+    -webkit-appearance: none;
+    position: relative;
+    margin-right: 20px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+}
+  
+.checkbox input:checked {
+    background: #3e6aff;
+}
+  
+.checkbox input:before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 2px;
+    height: 21px;
+    width: 21px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    transition: left 0.4s cubic-bezier(0.43, 0.04, 0.41, 0.87);
+}
+
+input:checked:before { 
+    left: 22px;
+    filter: drop-shadow(0 0 2.5px rgba(0,0,0,0.5));
+}
+
+.form-table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.row > label,
+.row > input,
+.row > select,
+.row > textarea,
+.row > span {
+    display: table-cell;
+}
+
+.row > label,
+.row span {
+    width: 160px;
+}
+
+.row > input,
+.row > select,
+.row > textarea {
+    width: 340px;
+}
+
+.row input {
+    margin-bottom: 15px;
+}
+
+.sex label {
+    margin-right: 25px;
+}
+
+.sex input {
+    margin-right: 10px;
+}
+
+.top {
+    vertical-align: top;
+    padding-top: 14px;
+}
+
+.fixed {
+    position: fixed;
+    top: 104px;
+    right: 15%;
+}
+
+.fixed-form {
+    padding: 21px;
+    width: 310px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.fixed label {
+    font-size: 13px;
+    color: #b3b3b3;
+    margin: 8px 0;
+}
+
+.fixed a {
+    margin: 12px 0;
+    font-size: 13px;
+    color: #3e6aff;
+    text-decoration: none;
+}
+
+.fixed a:hover {
+    text-decoration: underline;
+}
+
+.fixed-input {
+    height: 36px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 12px 17px;
+}
+
+label.remember-password {
+    color: #1f222c;
+    vertical-align: middle;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.remember-password input {
+    margin-right: 7px;
+}
+
+.close-checkbox {
+    position: absolute;
+    left: -99999px;
+}
+
+.close-label {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    background-image: url(../img/close.png);
+    cursor: pointer;
+}
+
+.close-checkbox:checked + #close {
+    display:none
+}

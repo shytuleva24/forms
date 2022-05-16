@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="img/Форми.png" alt="Форми">
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="flex simpleform">
+                <form action="index.html" method="post">
+                    <h1>01. проста форма</h1>
+                    <input class="input" type="name" placeholder="Введіть ім’я">
+                    <input class="input" type="email" placeholder="Email">                    
+                    <select class="input" name="simpleform-city" id="simpleform-city">
+                        <option value="Your place">Ваше місто</option>
+                        <option value="Kyiv">Київ</option>
+                        <option value="Lviv">Львів</option>
+                        <option value="Khmelnitsky">Хмельницький</option>
+                    </select>
+                    <textarea class="input" placeholder="Введіть текст повідомлення" rows="6"></textarea> 
+                    <input class="register" type="submit" value="Зареєструватися">              
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="container">
+            <div>
+                <form action="index.html" method="post">
+                    <h1>02. елементи</h1>
+                    <div class="elements flex">
+                        <div class="delivery flex">
+                            <label><input type="radio" name="delivery-type" value="Нова Пошта">Нова Пошта</label>
+                            <label><input type="radio" name="delivery-type" value="Кур’єр">Кур’єр</label>
+                            <label><input type="radio" name="delivery-type" value="Самовивіз" disabled>Самовивіз</label>
+                        </div>
+                        <div class="delivery flex">
+                            <label><input type="checkbox" value="Прочитав умови договору">Прочитав умови договору</label>
+                            <label><input type="checkbox" value="Згідний з ПДВ 9%">Згідний з ПДВ 9%</label>
+                            <label><input type="checkbox" value="Отримувати новини на ел. пошту" disabled>Отримувати новини на ел. пошту</label>
+                        </div>
+                        <div class="products flex">
+                            <div class="products-chek flex">
+                                <p>Статус</p>
+                                <label><input type="checkbox" value="Новинки">Новинки</label>
+                                <label><input type="checkbox" value="Акційні товари">Акційні товари</label>
+                                <label><input type="checkbox" value="Розпродаж">Розпродаж</label>
+                            </div>
+                            <div class="products-date flex">
+                                <p>Дата</p>
+                                <label><input id="date" type="date" value="2018-03-17"></label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="container">
+            <div>
+                <form action="index.html" method="post">
+                    <h1>03. стилізовані чекбокси </h1>
+                    <div class="flex">
+                        <div class="radio-sex flex">
+                            <div>
+                              <input type="radio" name="sex" value="Чоловік" id="male">
+                              <label class="radio-control male" for="male">Чоловік</label>
+                            </div>
+                            <div>
+                              <input type="radio" name="sex" value="Жінка" id="female">
+                              <label class="radio-control female" for="female">Жінка</label>
+                            </div>
+                        </div>
+                        <div class="slide-checkbox flex">
+                            <div class="checkbox">
+                                <input type="checkbox" id="click1">
+                                <label for="click1" class="text">Отримувати новини</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="click2">
+                                <label for="click2" class="text">Купити додому ковбаси</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="click3">
+                                <label for="click3" class="text">Включити світло</label>
+                            </div>
+                        </div>
+                    </div>            
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="container">
+            <div>
+                <form action="index.html" method="post">
+                    <h1>04. форма таблицею</h1>
+                    <div class="form-table">
+                        <div class="row">
+                            <label class="radio-control female" for="female">ФІО:</label>
+                            <input class="input" type="name" placeholder="Введіть ім’я">
+                        </div>
+                        <div class="row">
+                            <label class="radio-control female" for="female">Пароль:</label>
+                            <input class="input" type="password" placeholder="Введіть не менше 6 символів">
+                        </div>
+                        <div class="row">
+                            <label class="radio-control female" for="female">Місто:</label>
+                            <select class="input" name="simpleform-city" id="simpleform-city">
+                                <option value="Khmelnitsky">Хмельницький</option>
+                                <option value="Kyiv">Київ</option>
+                                <option value="Lviv">Львів</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label class="radio-control female" for="female">Стать:</label>
+                            <div class="sex">
+                                <label><input type="radio" name="delivery-type" value="Чоловік">Чоловік</label>
+                                <label><input type="radio" name="delivery-type" value="Жінка">Жінка</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="radio-control female" for="female">Фото:</label>
+                            <input type="file" name="sex" value="Жінка" id="female">
+                        </div>
+                        <div class="row">
+                            <label class="radio-control top" for="female">Коментарій:</label>
+                            <textarea class="input" placeholder="Введіть текст повідомлення" rows="6"></textarea>
+                        </div>
+                        <div class="row">
+                            <span></span>                            
+                            <input class="register" type="submit" value="Зареєструватися">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="container">
+            <div>
+                <form action="index.html" method="post">
+                    <h1>05. форма таблицею</h1>
+                </form>
+            </div>
+        </section>
+        <section class="container">
+            <input type="checkbox" class="close-checkbox" name="sex" value="close" id="close-checkbox">
+            <form class="fixed" action="index.html" id="close" method="post">
+                <h1>06. фіксована форма</h1>
+                <div class="fixed-form flex">
+                    <label class="close-label fixed-inp" for="close-checkbox"></label>
+                    <label class="radio-control" for="female">Логін</label>
+                    <input class="fixed-input" type="name">
+                    <label class="radio-control" for="female">Пароль</label>
+                    <input class="fixed-input" type="password">  
+                    <a href="#">Забули пароль?</a>                  
+                    <label class="remember-password"><input type="checkbox" value="Розпродаж">Запам’ятати пароль</label>
+                    <input class="register" type="submit" value="Увійти">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
