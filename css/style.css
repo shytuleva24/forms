@@ -190,6 +190,9 @@ input:active, textarea:active {
     width: 100%;
 }
 
+.submit {
+    cursor: pointer;
+}
 .register {
     width: 100%;
     padding: 15px 0;
@@ -198,6 +201,7 @@ input:active, textarea:active {
     background-color: #12d661;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .register:hover {
@@ -461,6 +465,7 @@ label.top {
     height: 43px;
     border-radius: 3px;
     background-color: #12d661;
+    cursor: pointer;
 }
 
 .buttons .register:hover {
