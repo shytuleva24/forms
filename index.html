@@ -23,12 +23,14 @@
                     <h1>01. проста форма</h1>
                     <input class="input" type="name" placeholder="Введіть ім’я">
                     <input class="input" type="email" placeholder="Email">                    
-                    <select class="input" name="simpleform-city" id="simpleform-city">
-                        <option value="Your place">Ваше місто</option>
-                        <option value="Kyiv">Київ</option>
-                        <option value="Lviv">Львів</option>
-                        <option value="Khmelnitsky">Хмельницький</option>
-                    </select>
+                    <div class="myselect">
+                        <select class="input" name="simpleform-city" id="simpleform-city">
+                            <option value="Your place">Ваше місто</option>
+                            <option value="Kyiv">Київ</option>
+                            <option value="Lviv">Львів</option>
+                            <option value="Khmelnitsky">Хмельницький</option>
+                        </select>
+                    </div>
                     <textarea class="input" placeholder="Введіть текст повідомлення" rows="6"></textarea> 
                     <input class="register" type="submit" value="Зареєструватися">              
                 </form>
@@ -116,28 +118,44 @@
         </div>
         <section class="container">
             <div>
-                <form action="index.html" method="post">
+                <form action="index.html" class="form-table" method="post">
                     <h1>04. форма таблицею</h1>
-                    <div class="form-table1">
+                    <p>Заповніть усі необхідні поля</p>
+                    <div class="table">
                         <div class="row">
-                            <label class="table1" for="table1name">ФІО:</label>
-                            <input class="input" type="name" id="table1name" placeholder="Введіть ім’я">
+                            <div class="table-cell">
+                                <label class="table1" for="table1name">ФІО:</label>
+                            </div>
+                            <div class="table-cell">
+                                <input class="input" type="name" id="table1name" placeholder="Введіть ім’я">
+                            </div>
                         </div>
                         <div class="row">
-                            <label class="table1" for="table1pass">Пароль:</label>
-                            <input class="input" type="password" id="table1pass" placeholder="Введіть не менше 6 символів">
+                            <div class="table-cell">
+                                <label class="table1" for="table1pass">Пароль:</label>
+                            </div>
+                            <div class="table-cell">
+                                <input class="input" type="password" id="table1pass" placeholder="Введіть не менше 6 символів">
+                            </div>
                         </div>
                         <div class="row">
-                            <label class="table1" for="table1city">Місто:</label>
-                            <select class="input" id="table1city" name="simpleform-city">
-                                <option value="Khmelnitsky">Хмельницький</option>
-                                <option value="Kyiv">Київ</option>
-                                <option value="Lviv">Львів</option>
-                            </select>
+                            <div class="table-cell">
+                                <label class="table1" for="table1city">Місто:</label>
+                            </div>
+                            <div class="table-cell myselect">
+                                <select class="input" id="table1city" name="simpleform-city">
+                                    <option value="Khmelnitsky">Хмельницький</option>
+                                    <option value="Khmelnitsky">Хмельницький</option>
+                                    <option value="Kyiv">Київ</option>
+                                    <option value="Lviv">Львів</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="row">
-                            <label class="table1">Стать:</label>
-                            <div class="sex">
+                            <div class="table-cell">
+                                <label class="table12">Стать:</label>
+                            </div>
+                            <div class="table-cell sex">
                                 <input class="radio" id="sex-male" type="radio" name="table1-sex" value="Чоловік">
                                 <label for="sex-male">Чоловік</label>
                                 <input class="radio" id="sex-womale" type="radio" name="table1-sex" value="Жінка">
@@ -145,20 +163,28 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="table1 file" for="file">Фото:</label>
-                            <label class="file1 file" for="file">Выберите файл</label>
-                            <input type="file" id="file" value="file">
+                            <div class="table-cell">
+                                <label class="table1 file" for="file">Фото:</label>
+                            </div>
+                            <div class="table-cell">
+                                <label class="file1 file" for="file">Выберите файл</label>
+                                <input type="file" id="file" value="file">
+                            </div>
                         </div>
                         <div class="row">
-                            <label class="table1 top" for="textarea">Коментарій:</label>
-                            <textarea class="input" id="textarea" placeholder="Введіть текст повідомлення" rows="6"></textarea>
+                            <div class="table-cell top">
+                                <label class="table1 top" for="textarea">Коментарій:</label>
+                            </div>
+                            <div class="table-cell">
+                                <textarea class="input" id="textarea" placeholder="Введіть текст повідомлення" rows="6"></textarea>
+                            </div>
                         </div>
                         <div class="row">
-                            <span></span>                            
-                            <input class="register" type="submit" value="Зареєструватися">
+                            <div class="table-cell"><span></span></div>                            
+                            <div class="table-cell"><input class="register" type="submit" value="Зареєструватися"></div>
                         </div>
                     </div>
-                </form>
+                </form>            
             </div>
         </section>
         <div class="container">
@@ -187,9 +213,10 @@
                         <hr>
                     <table>
                         <tr>
-                            <td>
+                            <td class="myselect">
                                 <label class="table2">Країна</label>
                                 <select class="input">
+                                    <option value="Індонезія">Індонезія</option>
                                     <option value="Індонезія">Індонезія</option>
                                     <option value="Україна">Україна</option>
                                     <option value="Італія">Італія</option>

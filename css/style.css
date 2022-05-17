@@ -90,8 +90,7 @@ input:active, textarea:active {
 
 .radio + label {
     position: relative;
-    padding: 0 25px 20px;
-    
+    padding: 0 25px 20px;  
 }
 
 .radio + label:before,
@@ -192,6 +191,7 @@ input:active, textarea:active {
 }
 
 .register {
+    width: 100%;
     padding: 15px 0;
     color: #ffffff;
     font-weight: 700;
@@ -342,33 +342,35 @@ input:checked:before {
     filter: drop-shadow(0 0 2.5px rgba(0,0,0,0.5));
 }
 
-.form-table {
+.table {
     display: table;
+    max-width: 500px;
+}
+
+p {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
 }
 
 .row {
     display: table-row;
 }
 
-.row > label,
-.row > input,
-.row > select,
-.row > textarea,
-.row > span {
+.table-cell {
     display: table-cell;
+    width: 100%;
 }
 
-.row > label,
-.row span {
-    width: 160px;
-    padding: 12px 0;
+.table-cell:first-child  {
+    width: 40%;
 }
 
-.row > input,
-.row > select,
-.row > textarea {
-    width: 340px;
+.table-cell:last-child  {
+    width: 370px;
+
 }
+
 
 .row input {
     margin-bottom: 15px;
@@ -390,10 +392,10 @@ label.file1 {
     color: #ffffff;
     font-weight: 700;
     text-align: center;
-    width: 170px;
+    padding: 15px 30px;
     border-radius: 3px;
     background-color: #3e6aff;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 label.file1:hover {
@@ -408,7 +410,7 @@ label.file1:hover {
     margin-right: 10px;
 }
 
-.top {
+label.top {
     vertical-align: top;
     padding-top: 14px;
 }
@@ -537,4 +539,39 @@ label.remember-password {
 
 .close-checkbox:checked + #close {
     display:none
+}
+
+.myselect {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+  
+.myselect option:first-child {
+    display: none;
+}
+  
+.myselect select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    padding: 12px 17px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 3px;
+    z-index: 1;
+}
+  
+.myselect:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    z-index: 0;
+}
+
+td.myselect:before {
+    top: 35px;
 }
