@@ -560,6 +560,10 @@ label.remember-password {
     z-index: 1;
 }
 
+.close-label:hover:before {
+    color: #7b7b7b;
+}
+
 .close-checkbox:checked ~ .close-label {
     display:none; 
 }
