@@ -8,12 +8,6 @@ body {
     font-size: 14px;
 }
 
-textarea {
-    font-family: "Roboto";
-    min-height: 40px;
-    max-height: 250px;
-}
-
 h1 {
     margin-top: 0;
     margin-bottom: 30px;
@@ -25,6 +19,9 @@ h1 {
 
 textarea {
     resize: vertical;
+    font-family: "Roboto";
+    min-height: 40px;
+    max-height: 250px;
 }
 
 hr {
@@ -36,6 +33,10 @@ hr {
 
 input {
     margin: 0;
+}
+
+td {
+    padding: 0;
 }
 
 input:focus-visible,
@@ -78,7 +79,7 @@ input:active, textarea:active {
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
-    max-width: 960px;
+    max-width: 75%;
     position: relative;
 }
 
@@ -253,6 +254,14 @@ input:active, textarea:active {
     align-items: center;
 }
 
+.products-date input {
+    padding: 10px 17px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+}
+
 .products-chek label {
     padding-bottom: 0;
 }
@@ -351,7 +360,7 @@ input:checked:before {
     max-width: 500px;
 }
 
-p {
+.form-table p {
     font-size: 18px;
     color: #1f222c;
     font-weight: 700;
@@ -368,20 +377,21 @@ p {
 
 .table-cell:first-child  {
     width: 40%;
+    vertical-align: top;
+    padding: 13px 0;
 }
 
 .table-cell:last-child  {
     width: 370px;
-
 }
-
 
 .row input {
     margin-bottom: 15px;
 }
 
+
 label.table12 {
-      padding: 13px 0 17px;
+    padding: 13px 0 17px;
 }
 
 .file + input {
@@ -399,46 +409,42 @@ label.file1 {
     padding: 15px 30px;
     border-radius: 3px;
     background-color: #3e6aff;
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 label.file1:hover {
     filter: drop-shadow(0px 2px 2.5px rgba(15,40,126,0.35));
 }
 
-.sex label {
-    margin-right: 25px;
-}
-
-.sex input {
-    margin-right: 10px;
-}
-
-label.top {
-    vertical-align: top;
-    padding-top: 14px;
+.sex,
+.file {
+    vertical-align: middle;
 }
 
 .form-table2 {
     max-width: 680px;
+    border-collapse: collapse;
+}
+
+table {
+    padding: 0;
+    border: ;
 }
 
 .form-table2 label {
+    display: inline-block;
     font-size: 13px;
     color: #b3b3b3;
+    padding-bottom: 5px;
 }
 
 .form-table2 table td {
     border-left: 4px solid transparent;
+    width: 33.3%;
 }
 
 .form-table2 table td:first-child {
     border-left: none;
-}
-
-.form-table2 input,
-.form-table2 select {
-    margin-top: 6px;
 }
 
 .buttons {
@@ -473,10 +479,10 @@ label.top {
     background-color: #07be51
 }
 
-.fixed {
+.fix {
     position: fixed;
     top: 104px;
-    right: 15%;
+    right: 12.4%;
 }
 
 .fixed-form {
@@ -533,23 +539,37 @@ label.remember-password {
 
 .close-label {
     position: absolute;
-    top: 11px;
-    right: 11px;
+    top: 60px;
+    right: 7px;
     width: 10px;
     height: 10px;
     z-index: 1;
-    background-image: url(../img/close.png);
     cursor: pointer;
 }
 
-.close-checkbox:checked + #close {
-    display:none
+.close-label:before {
+    content: "+";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    font-size: 20px;
+    color: #b3b3b3;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.close-checkbox:checked ~ .close-label {
+    display:none; 
+}
+
+.close-checkbox:checked ~ .fixed {
+    display:none;
 }
 
 .myselect {
     position: relative;
-    display: inline-block;
     width: 100%;
+    display: inline-block;
 }
   
 .myselect option:first-child {
@@ -559,24 +579,21 @@ label.remember-password {
 .myselect select {
     appearance: none;
     -webkit-appearance: none;
-    position: relative;
+    display: inline-block;
     padding: 12px 17px;
     width: 100%;
     background-color: transparent;
     border-radius: 3px;
-    z-index: 1;
+    z-index: 2;
 }
   
 .myselect:before {
     content: "";
     position: absolute;
     right: 20px;
-    top: 18px;
+    top: 17px;
     border: 6px solid transparent;
     border-top-color: #000;
     z-index: 0;
 }
 
-td.myselect:before {
-    top: 35px;
-}
